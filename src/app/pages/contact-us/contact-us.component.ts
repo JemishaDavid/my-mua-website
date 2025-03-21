@@ -1,33 +1,24 @@
 import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  template: `
-    <div class="contact-form">
-      <h2>Contact Us</h2>
-      <form>
-        <div class="mb-3">
-          <label class="form-label">WhatsApp Number / Email:</label>
-          <input type="text" class="form-control" placeholder="Enter your contact details">
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Message:</label>
-          <textarea class="form-control" rows="3" placeholder="Type your message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Send Message</button>
-      </form>
-    </div>
-  `,
-  styles: [`
-    .contact-form {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-  `]
+  imports: [CommonModule, FormsModule],
+  templateUrl: './contact-us.component.html',
+  styleUrls: ['./contact-us.component.css']
 })
-export class ContactUsComponent {}
+export class ContactUsComponent {
+  name = '';
+  contactInfo = '';
+  comments = '';
+
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      console.log('Form submitted!', this.name, this.contactInfo, this.comments);
+      alert('Thank you for contacting us!');
+      form.reset();
+    }
+  }
+}

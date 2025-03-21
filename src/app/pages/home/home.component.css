@@ -1,88 +1,54 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fff5f7;
+.home-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .home-card {
+    width: calc(33.33% - 40px); /* Adjust to increase or decrease the card width */
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .home-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .home-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .home-card-content {
+    padding: 20px;
+  }
+  
+  .home-card-title {
+    font-size: 24px;
     color: #333;
   }
   
-  /* Hero Section */
-  .hero-section {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+  .home-card-description {
+    font-size: 14px;
+    color: #777;
   }
   
-  .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+  @media (max-width: 768px) {
+    .home-card {
+      width: calc(50% - 20px);
+    }
   }
   
-  .hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #ff6b81;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #ff4757;
-  }
-  
-  /* About Section */
-  .about-section {
-    background-color: #ffe4e6;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .about-section h2 {
-    color: #ff6b81;
-  }
-  
-  /* Services Section */
-  .services-section {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .service-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 10px auto;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  h3 {
-    color: #ff6b81;
-  }
-  
-  /* Footer Section */
-  .footer-section {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .footer-section a {
-    color: #ff9a9e;
-    text-decoration: none;
-  }
-  
-  .footer-section a:hover {
-    text-decoration: underline;
+  @media (max-width: 480px) {
+    .home-card {
+      width: 100%;
+    }
   }
   

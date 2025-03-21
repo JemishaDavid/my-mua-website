@@ -6,10 +6,12 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   template: `
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
       <div class="container">
         <a class="navbar-brand" routerLink="/">
-          <img src="assets/logo.png" alt="Logo" class="logo"> MUA Website
+          <h1 class="navbar-heading">
+            <span class="cute-font">Own Look</span>
+          </h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
@@ -41,10 +43,20 @@ import { RouterModule } from '@angular/router';
     </div>
   `,
   styles: [`
-    .logo {
-      height: 50px;
-      width: auto;
-      margin-right: 10px;
+    .custom-navbar {
+      background-color: #ff69b4;
+      height: 70px;
+    }
+    .navbar-heading {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .cute-font {
+      font-family: 'Dancing Script', cursive;
+      font-size: 40px;
+      color: #fff;
     }
   `]
 })

@@ -1,1 +1,21 @@
-<p>contact-us works!</p>
+<div class="contact-card">
+    <h2>Contact Us 💌</h2>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      
+      <!-- Name Field -->
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="name" required placeholder="Enter your name" />
+  
+      <!-- Contact Info Field -->
+      <label for="contactInfo">WhatsApp Number or Email</label>
+      <input type="text" id="contactInfo" name="contactInfo" [(ngModel)]="contactInfo" required placeholder="Enter your number or email" />
+  
+      <!-- Comments Field -->
+      <label for="comments">Your Message</label>
+      <textarea id="comments" name="comments" [(ngModel)]="comments" required placeholder="Write your thoughts..."></textarea>
+  
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="!contactForm.valid">Send Message 💖</button>
+    </form>
+  </div>
+  

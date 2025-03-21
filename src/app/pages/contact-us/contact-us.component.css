@@ -1,0 +1,70 @@
+body {
+    background-color: #fff0f5;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contact-card {
+    background: #ffe6f2;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #ff69b4;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #d63384;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1em;
+    box-shadow: inset 3px 3px 6px #f3c1d6;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #ff69b4;
+  }
+  
+  textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  button {
+    background-color: #ff69b4;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d63384;
+  }
+  
+  button:disabled {
+    background-color: #ffc0cb;
+    cursor: not-allowed;
+  }
+  

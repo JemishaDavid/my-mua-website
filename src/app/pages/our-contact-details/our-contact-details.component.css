@@ -1,0 +1,17 @@
+ h1 { color: #ff69b4; font-family: 'Brush Script MT', cursive; }
+  p { color: #555; }
+  
+  .gallery img, .package-card { border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+  .gallery { display: flex; gap: 16px; }
+  .packages { display: flex; gap: 16px; }
+
+  .package-card { 
+    background-color: #ffe4e1;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    width: 30%;
+  }
+
+  .our-contact-details .contact-info p { color: #ff1493; }
